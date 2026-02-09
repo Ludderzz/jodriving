@@ -35,30 +35,38 @@ export default function Info() {
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-brand-yellow font-bold uppercase tracking-widest text-xs md:text-sm mb-3">
+        
+        {/* Static Header */}
+        <div className="text-center mb-16 lg:mb-24">
+          <h2 className="text-[#006837] font-bold uppercase tracking-[0.2em] text-xs mb-4">
             Professional Tuition
           </h2>
-          <p className="text-4xl md:text-5xl font-black text-brand-charcoal uppercase tracking-tighter">
+          <p className="text-5xl md:text-6xl font-black text-[#1A1A1A] uppercase tracking-[-0.04em] leading-[0.9]">
             Setting the standard <br className="hidden md:block" /> for student success.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 hover:border-brand-yellow/50 transition-all group hover:shadow-2xl hover:-translate-y-2"
+              className="relative bg-white p-10 lg:p-12 rounded-[2.5rem] border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col items-start"
             >
-              <div className="w-16 h-16 bg-brand-charcoal text-brand-yellow rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-yellow group-hover:text-brand-charcoal transition-colors">
+              {/* Permanent Color Box - No Hover Needed */}
+              <div className="w-16 h-16 bg-[#006837] text-white rounded-2xl flex items-center justify-center mb-10 shadow-lg shadow-[#006837]/20">
                 {feature.icon}
               </div>
-              <h3 className="text-2xl font-black text-brand-charcoal mb-4 uppercase tracking-tight">
+              
+              <h3 className="text-2xl font-black text-[#1A1A1A] mb-4 uppercase tracking-tight leading-tight">
                 {feature.title}
               </h3>
-              <p className="text-brand-slate leading-relaxed text-sm md:text-base">
+              
+              <p className="text-slate-500 leading-relaxed font-medium mb-4">
                 {feature.description}
               </p>
+
+              {/* Permanent Red Accent Strip - anchors the brand identity */}
+              <div className="absolute bottom-0 left-0 w-full h-2 bg-[#E30613]" />
             </div>
           ))}
         </div>

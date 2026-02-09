@@ -8,75 +8,75 @@ export default function Contact() {
           
           {/* Left Side: Text & Info */}
           <div>
-            <h2 className="text-brand-yellow font-bold uppercase tracking-widest text-sm mb-3">
+            <h2 className="text-[#006837] font-bold uppercase tracking-[0.2em] text-xs mb-4">
               Get Started
             </h2>
-            <p className="text-5xl font-black text-brand-charcoal uppercase tracking-tighter mb-8">
+            <p className="text-5xl md:text-6xl font-black text-[#1A1A1A] uppercase tracking-[-0.04em] leading-[0.9] mb-8">
               Book Your <br /> First Lesson.
             </p>
-            <p className="text-lg text-brand-slate leading-relaxed mb-8 max-w-md">
-              Fill out the form and I'll get back to you as soon as possible to discuss availability and get you on the road!
+            <p className="text-lg text-slate-500 leading-relaxed mb-10 max-w-md font-medium">
+              Fill out the form and I'll get back to you as soon as possible to discuss availability and get you on the road.
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-brand-charcoal">
+              <div className="group flex items-center gap-5">
+                <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-[#1A1A1A] group-hover:bg-[#006837] group-hover:text-white transition-all duration-300">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 </div>
-                <p className="font-bold text-brand-charcoal">07xxx xxxxxx</p>
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Call or Text</p>
+                  <p className="font-black text-[#1A1A1A] text-xl">07xxx xxxxxx</p>
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-brand-charcoal">
+
+              <div className="group flex items-center gap-5">
+                <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-[#1A1A1A] group-hover:bg-[#006837] group-hover:text-white transition-all duration-300">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
-                <p className="font-bold text-brand-charcoal">joanne@example.com</p>
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email Me</p>
+                  <p className="font-black text-[#1A1A1A] text-xl">joanne@example.com</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Side: The Form */}
-          <div className="bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-100">
+          <div className="bg-[#1A1A1A] p-8 md:p-12 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)]">
             <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
               
               <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-charcoal ml-1">Full Name</label>
-                <input type="text" placeholder="John Doe" className="w-full p-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-yellow outline-none transition-all" />
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#006837] ml-1">Full Name</label>
+                <input type="text" placeholder="Your Name" className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/20 focus:border-[#006837] focus:ring-1 focus:ring-[#006837] outline-none transition-all" />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-charcoal ml-1">Area</label>
-                <input type="text" placeholder="e.g. Clevedon" className="w-full p-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-yellow outline-none transition-all" />
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#006837] ml-1">Area</label>
+                <input type="text" placeholder="e.g. Clevedon" className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/20 focus:border-[#006837] focus:ring-1 focus:ring-[#006837] outline-none transition-all" />
               </div>
 
               <div className="space-y-2 md:col-span-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-charcoal ml-1">Driving Experience</label>
-                <select className="w-full p-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-yellow outline-none transition-all appearance-none bg-white">
-                  <option>Complete Beginner</option>
-                  <option>Some Experience</option>
-                  <option>Previously Failed Test</option>
-                  <option>Refresher Lessons</option>
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#006837] ml-1">Experience Level</label>
+                <select className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-[#006837] focus:ring-1 focus:ring-[#006837] outline-none transition-all appearance-none">
+                  <option className="bg-[#1A1A1A]">Complete Beginner</option>
+                  <option className="bg-[#1A1A1A]">Some Experience</option>
+                  <option className="bg-[#1A1A1A]">Test Ready / Refresher</option>
                 </select>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-charcoal ml-1">Email</label>
-                <input type="email" placeholder="john@example.com" className="w-full p-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-yellow outline-none transition-all" />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-charcoal ml-1">Phone Number</label>
-                <input type="tel" placeholder="07123 456789" className="w-full p-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-yellow outline-none transition-all" />
-              </div>
-
               <div className="space-y-2 md:col-span-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-charcoal ml-1">Message</label>
-                <textarea rows={4} placeholder="Tell me about your schedule..." className="w-full p-4 rounded-2xl border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-yellow outline-none transition-all resize-none"></textarea>
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#006837] ml-1">Message</label>
+                <textarea rows={3} placeholder="Tell me about your schedule..." className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/20 focus:border-[#006837] focus:ring-1 focus:ring-[#006837] outline-none transition-all resize-none"></textarea>
               </div>
 
-              <button className="md:col-span-2 bg-brand-charcoal text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-brand-yellow hover:text-brand-charcoal transition-all shadow-xl active:scale-95">
+              <button className="md:col-span-2 bg-[#006837] text-white py-5 rounded-xl font-black uppercase tracking-widest hover:bg-[#E30613] transition-all shadow-xl active:scale-95 group flex items-center justify-center gap-3">
                 Send Inquiry
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7-7 7M3 12h18" /></svg>
               </button>
 
+              <p className="md:col-span-2 text-center text-white/30 text-[10px] uppercase tracking-widest font-bold">
+                Usually responds within 24 hours
+              </p>
             </form>
           </div>
         </div>
