@@ -3,13 +3,9 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    /* THE FIX: Using -mt-[120px] to pull the Hero up behind the fixed header.
-       Added pt-[140px] to ensure the actual CONTENT starts below the header 
-       while the background/accents bleed all the way to the top.
-    */
     <section className="relative flex items-center -mt-[250px] pt-[140px] pb-16 overflow-hidden bg-white">
       
-      {/* Subtle Background Accent: Deep Green skew - now bleeds to the very top */}
+      {/* Subtle Background Accent */}
       <div className="absolute top-0 right-0 -z-10 w-1/3 h-full bg-[#006837]/5 skew-x-12 translate-x-24 hidden lg:block" />
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -17,7 +13,7 @@ export default function Hero() {
         {/* Left Content */}
         <div className="z-10 order-2 lg:order-1 text-center lg:text-left">
           
-          {/* Status Badge: Solid Green (No more hover/transparency) */}
+          {/* Status Badge */}
           <div className="inline-flex items-center gap-2 bg-[#006837] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.15em] mb-8 shadow-lg shadow-[#006837]/30">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
@@ -26,7 +22,6 @@ export default function Hero() {
             Available for 2026 Lessons
           </div>
           
-          {/* Typography: Using your high-contrast palette */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[110px] font-black leading-[0.82] tracking-[-0.04em] uppercase text-[#1A1A1A]">
             Drive <br />
             <span className="text-[#006837]">Smarter.</span> <br />
@@ -36,6 +31,24 @@ export default function Hero() {
           <p className="mt-8 text-lg md:text-xl text-slate-500 max-w-md mx-auto lg:mx-0 leading-relaxed font-medium">
             Hi, I’m <span className="text-[#1A1A1A] font-bold border-b-2 border-[#E30613] pb-0.5">Joanne</span>. A fully qualified ADI with <span className="text-[#1A1A1A] font-bold">25+ years experience</span> in Clevedon and surrounding areas.
           </p>
+
+          {/* NEW: Book Now Button */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a 
+              href="#contact" 
+              className="group relative inline-flex items-center justify-center px-8 py-4 font-black text-white bg-[#1A1A1A] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-black/20"
+            >
+              <span className="relative z-10 uppercase tracking-widest text-sm">Book Your First Lesson</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#006837] to-[#25D366] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </a>
+            
+            <a 
+              href="tel:07765254421" 
+              className="text-[#1A1A1A] font-bold text-sm uppercase tracking-widest border-b-2 border-transparent hover:border-[#E30613] transition-all py-2"
+            >
+              Or call 07765 254421
+            </a>
+          </div>
         </div>
 
         {/* Right Visuals */}
