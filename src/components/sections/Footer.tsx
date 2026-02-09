@@ -22,7 +22,7 @@ export default function Footer() {
                 J
               </div>
               <span className="text-2xl font-black uppercase tracking-tighter italic">
-                Joanne's <span className="text-brand-yellow not-italic">DS.</span>
+                Joanne's <span className="text-brand-yellow not-italic">Driving School.</span>
               </span>
             </div>
             <p className="text-slate-400 max-w-sm mx-auto md:mx-0 leading-relaxed text-sm md:text-base">
@@ -51,11 +51,11 @@ export default function Footer() {
               Connect
             </h4>
             <div className="space-y-6">
-              <a href="tel:07000000000" className="block text-slate-300 hover:text-white transition-colors group">
+              <a href="tel:07765254421" className="block text-slate-300 hover:text-white transition-colors group">
                 <span className="block text-[10px] uppercase font-bold text-slate-500 mb-1 group-hover:text-brand-yellow">Call or Text</span>
-                <span className="font-bold text-lg">07XXX XXXXXX</span>
+                <span className="font-bold text-lg">07765 254421</span>
               </a>
-              <a href="https://facebook.com" target="_blank" className="block text-slate-300 hover:text-white transition-colors group">
+              <a href="https://www.facebook.com/profile.php?id=61573173656596" target="_blank" className="block text-slate-300 hover:text-white transition-colors group">
                 <span className="block text-[10px] uppercase font-bold text-slate-500 mb-1 group-hover:text-brand-yellow">Facebook</span>
                 <span className="font-bold text-lg">Joanne's Driving School</span>
               </a>

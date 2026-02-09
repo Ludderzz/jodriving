@@ -47,7 +47,9 @@ export default function BrandHeader() {
           {/* Contact Details */}
           <div className="text-right">
              <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 leading-none mb-1">Text or Call</p>
-             <p className="text-lg font-black text-[#1A1A1A] leading-none tracking-tighter">07XXX XXXXXX</p>
+              <a href="tel:07765254421" className="block text-slate-300 hover:text-white transition-colors group">
+             <p className="text-lg font-black text-[#1A1A1A] leading-none tracking-tighter">07765 254421</p>
+             </a>
           </div>
 
         </div>

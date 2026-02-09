@@ -50,9 +50,9 @@ export default function Curriculum() {
                 
                 <div className="space-y-6">
                    {[
-                     { time: "8:30 AM – 10:30 AM", color: "bg-[#E30613]" }, 
-                     { time: "11:00 AM – 1:00 PM", color: "bg-amber-500" }, 
-                     { time: "1:30 PM – 3:30 PM", color: "bg-[#006837]" } 
+                     { time: "1 Hour lesson", color: "bg-[#E30613]" }, 
+                     { time: "2 Hours lesson", color: "bg-amber-500" }, 
+                     { time: "3 Hours lesson", color: "bg-[#006837]" } 
                    ].map((slot, idx) => (
                      <div key={idx} className="flex items-center gap-6">
                         {/* Permanent Traffic Light Glow */}

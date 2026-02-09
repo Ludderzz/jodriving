@@ -5,6 +5,7 @@ import AboutJo from "@/components/sections/AboutJo";
 import Reviews from "@/components/sections/Reviews";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import FAQ from "@/components/sections/Fqa";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       
       {/* 5. Social Proof / Wall of Love */}
       <Reviews />
-      
+      <FAQ />
       <Contact />
       <Footer />
     </main>
