@@ -71,7 +71,9 @@ export default function RootLayout({
       { "@type": "City", "name": "Clevedon" },
       { "@type": "City", "name": "Nailsea" },
       { "@type": "City", "name": "Portishead" },
-      { "@type": "City", "name": "Yatton" }
+      { "@type": "City", "name": "Yatton" },
+      { "@type": "City", "name": "Congresbury" },
+      { "@type": "City", "name": "Weston-Super-Mare" },
     ]
   };
 

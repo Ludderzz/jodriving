@@ -14,9 +14,6 @@ export default function AboutJo() {
           </div>
 
           <div className="bg-slate-50 p-3 md:p-4 rounded-[2.5rem] md:rounded-[3rem] shadow-lg md:shadow-xl relative max-w-md mx-auto md:max-w-none">
-             {/* Mobile: aspect-[4/3] (Bigger than video, smaller than full portrait)
-                Desktop: aspect-[4/5] (Classic professional portrait)
-             */}
              <div className="aspect-[4/3] md:aspect-[4/5] bg-slate-200 rounded-[1.8rem] md:rounded-[2.5rem] relative overflow-hidden">
                 <Image 
                   src="/propic.jpg" 
@@ -27,7 +24,7 @@ export default function AboutJo() {
                 /> 
              </div>
              
-             {/* Experience Badge: Tucked in slightly more for mobile */}
+             {/* Experience Badge */}
              <div className="absolute -bottom-4 -right-1 md:-bottom-8 md:-right-8 bg-[#1A1A1A] text-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl border border-white/10">
                 <p className="text-[#006837] font-black text-xl md:text-2xl leading-none">25+</p>
                 <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-white/50">Years On Road</p>
@@ -50,7 +47,7 @@ export default function AboutJo() {
            <div className="flex flex-col items-center md:items-start">
              <p className="text-[#1A1A1A] text-[10px] font-black uppercase tracking-[0.2em] mb-6">Service Areas</p>
              <div className="flex flex-wrap justify-center md:justify-start gap-2">
-               {["Clevedon", "Nailsea", "Portishead", "Backwell", "Yatton"].map(city => (
+               {["Clevedon", "Nailsea", "Portishead", "Backwell", "Yatton", "Congresbury", "Weston-Super-Mare"].map(city => (
                  <span 
                    key={city} 
                    className="bg-[#006837]/10 text-[#006837] border border-[#006837]/20 px-4 py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-[#E30613] hover:text-white transition-all duration-300"

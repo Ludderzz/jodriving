@@ -9,7 +9,7 @@ const faqData = [
   },
   {
     question: "What do I need to bring to my first lesson?",
-    answer: "You must bring your provisional driving license and, if you need them for driving, your glasses or contact lenses. We'll do a quick eyesight check (reading a number plate from 20 meters) before we start."
+    answer: "You must bring your provisional driving license and, if you need them for driving, your glasses or contact lenses and a pair of comfy shoes! We'll do a quick eyesight check (reading a number plate from 20 meters) before we start."
   },
   {
     question: "Do you offer block booking discounts?",
