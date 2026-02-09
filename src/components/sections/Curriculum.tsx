@@ -29,7 +29,6 @@ export default function Curriculum() {
             <div className="grid sm:grid-cols-2 gap-4">
               {skills.map((skill, i) => (
                 <div key={i} className="flex gap-4 p-5 rounded-2xl border border-[#006837]/20 bg-[#006837]/5 transition-transform hover:-translate-y-1 duration-300">
-                  {/* Icons are now permanently full-color */}
                   <span className="text-3xl">
                     {skill.icon}
                   </span>
@@ -50,18 +49,37 @@ export default function Curriculum() {
                 
                 <div className="space-y-6">
                    {[
-                     { time: "1 Hour lessons (Refresher lessons only)", color: "bg-[#E30613]" }, 
-                     { time: "2 Hours lessons", color: "bg-amber-500" }, 
-                     { time: "3 Hours lessons", color: "bg-[#006837]" } 
+                     { 
+                       time: "1 Hour Lessons", 
+                       note: "(Refresher lessons only)", 
+                       color: "bg-[#E30613]" 
+                     }, 
+                     { 
+                       time: "2 Hour Lessons", 
+                       note: null, 
+                       color: "bg-amber-500" 
+                     },
+                                          { 
+                       time: "3 Hour Lessons", 
+                       note: null, 
+                       color: "bg-green-500" 
+                     }
                    ].map((slot, idx) => (
                      <div key={idx} className="flex items-center gap-6">
-                        {/* Permanent Traffic Light Glow */}
+                        {/* Traffic Light Glow */}
                         <div className={`w-3 h-3 rounded-full ${slot.color} shadow-[0_0_15px_rgba(255,255,255,0.2)]`} />
                         
                         <div className="flex-1 border-b border-white/5 pb-4">
-                           <span className="text-xl md:text-2xl font-black tracking-tighter text-white">
-                            {slot.time}
-                           </span>
+                            <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                              <span className="text-xl md:text-2xl font-black tracking-tighter text-white uppercase">
+                                {slot.time}
+                              </span>
+                              {slot.note && (
+                                <span className="text-sm font-medium text-white/40 italic lowercase tracking-normal">
+                                  {slot.note}
+                                </span>
+                              )}
+                            </div>
                         </div>
                      </div>
                    ))}
@@ -77,7 +95,7 @@ export default function Curriculum() {
                 </div>
              </div>
              
-             {/* Large background "GO" - increased opacity for brand visibility */}
+             {/* Large background "GO" */}
              <span className="absolute -bottom-16 -right-10 text-[260px] font-black text-[#006837] opacity-[0.07] select-none uppercase pointer-events-none">
                 Go
              </span>

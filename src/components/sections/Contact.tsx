@@ -68,32 +68,34 @@ export default function Contact() {
                 <div className="space-y-8">
                   {/* Phone Row */}
                   <div className="flex items-center gap-5">
-                    <div className="w-14 h-14 bg-[#25D366] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[#25D366]/20">
+                    <div className="w-14 h-14 bg-[#25D366] rounded-2xl flex-shrink-0 flex items-center justify-center text-white shadow-lg shadow-[#25D366]/20">
                       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.222-4.032c1.504.893 3.12 1.365 4.771 1.365 5.228 0 9.482-4.254 9.485-9.482.001-2.533-.987-4.913-2.783-6.71s-4.176-2.784-6.71-2.784c-5.231 0-9.484 4.253-9.487 9.482-.001 1.817.516 3.593 1.496 5.141l-.979 3.574 3.656-.959z" />
                       </svg>
                     </div>
                     <div>
-                         <a href="tel:07765254421" className="block text-slate-300 hover:text-white transition-colors group">
-                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Mobile Contact</p>
-                      <p className="font-black text-[#1A1A1A] text-xl">07765 254421</p>
+                      <a href="tel:07765254421" className="block text-slate-300 hover:text-white transition-colors group">
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Mobile Contact</p>
+                        <p className="font-black text-[#1A1A1A] text-xl">07765 254421</p>
                       </a>
                     </div>
                   </div>
 
-                  {/* Email Row */}
+                  {/* Email Row - FIXED MOBILE WRAPPING */}
                   <div className="flex items-center gap-5">
-                    <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600">
+                    <div className="w-14 h-14 bg-slate-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-slate-600">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.53 6.47a1.125 1.125 0 01-1.27 0L2.25 6.75" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email Joanne</p>
-                    <a 
-                        href="mailto:joanne@example.com?subject=Driving Lesson Inquiry" 
-                        className="font-black text-[#1A1A1A] text-xl underline decoration-[#25D366] decoration-4 underline-offset-4 hover:text-[#006837] transition-colors"
-                        >jo@joannesdrivingschool.co.uk</a>
+                      <a 
+                        href="mailto:jo@joannesdrivingschool.co.uk?subject=Driving Lesson Inquiry" 
+                        className="font-black text-[#1A1A1A] text-lg sm:text-xl underline decoration-[#25D366] decoration-4 underline-offset-4 hover:text-[#006837] transition-colors break-all sm:break-normal"
+                      >
+                        jo@joannesdrivingschool.co.uk
+                      </a>
                     </div>
                   </div>
                 </div>
