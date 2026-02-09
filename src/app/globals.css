@@ -55,3 +55,15 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+@layer utilities {
+  @keyframes trafficSequence {
+    0%, 33% { content: '🔴'; }
+    34%, 66% { content: '🟠'; }
+    67%, 100% { content: '🟢'; }
+  }
+
+  .animate-traffic::after {
+    content: '🚦';
+    animation: trafficSequence 4s infinite;
+  }
+}

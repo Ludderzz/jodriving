@@ -22,7 +22,7 @@ export default function RootLayout({
         <BrandHeader />
         
         {/* Main content area */}
-        <main className="relative flex flex-col min-h-screen">
+        <main className="relative flex flex-col min-h-screen pt-[20px] md:pt-[20px]">
           {children}
         </main>
       </body>
