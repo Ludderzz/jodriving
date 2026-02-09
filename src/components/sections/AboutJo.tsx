@@ -47,7 +47,7 @@ export default function AboutJo() {
            <div className="flex flex-col items-center md:items-start">
              <p className="text-[#1A1A1A] text-[10px] font-black uppercase tracking-[0.2em] mb-6">Service Areas</p>
              <div className="flex flex-wrap justify-center md:justify-start gap-2">
-               {["Clevedon", "Nailsea", "Portishead", "Backwell", "Yatton", "Congresbury", "Weston-Super-Mare"].map(city => (
+               {["Clevedon", "Nailsea", "Portishead", "Backwell", "Yatton", "Congresbury"].map(city => (
                  <span 
                    key={city} 
                    className="bg-[#006837]/10 text-[#006837] border border-[#006837]/20 px-4 py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-[#E30613] hover:text-white transition-all duration-300"
