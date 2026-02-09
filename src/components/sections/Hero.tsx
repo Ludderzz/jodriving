@@ -29,14 +29,7 @@ export default function Hero() {
             Hi, I’m <span className="text-brand-charcoal font-bold">Joanne</span>. A fully qualified ADI with <span className="text-brand-charcoal font-bold">25+ years experience</span> in Clevedon, Nailsea, and Portishead.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="w-full sm:w-auto bg-brand-charcoal text-white px-10 py-5 rounded-2xl font-bold text-lg active:scale-95 hover:bg-brand-yellow hover:text-brand-charcoal transition-all shadow-xl">
-              Book First Lesson
-            </button>
-            <button className="w-full sm:w-auto bg-white border-2 border-slate-200 text-brand-charcoal px-10 py-5 rounded-2xl font-bold text-lg active:bg-slate-50 transition-all">
-              View Pricing
-            </button>
-          </div>
+         
         </div>
 
         {/* Right Visuals */}
