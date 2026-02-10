@@ -2,15 +2,19 @@ import "./globals.css";
 import type { Metadata } from "next";
 import BrandHeader from "@/components/layout/BrandHeader";
 
-// 1. Move this to a plain string or use an environment variable
 const BASE_URL = "https://www.joannesdrivingschool.co.uk";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL), // This is the "magic" line that fixes your issue!
+  metadataBase: new URL(BASE_URL),
   title: "Joanne's Driving School | Expert Lessons in Clevedon & Nailsea",
   description: "Fully qualified female ADI with 25+ years experience. Professional driving tuition in Clevedon, Nailsea, Portishead, and surrounding areas. High pass rates and nervous pupil specialist.",
-  keywords: ["Driving lessons Clevedon", "Driving instructor Nailsea", "Female driving instructor North Somerset", "Automatic driving lessons Clevedon", "Learn to drive Portishead"],
+  keywords: ["Driving lessons Clevedon", "Driving instructor Nailsea", "Female driving instructor North Somerset", "Driving lessons Portishead", "Learn to drive Clevedon"],
   
+  // This helps SEO by preventing duplicate content issues
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     title: "Joanne's Driving School | Professional Driving Tuition",
     description: "Start your journey to freedom with expert driving lessons in North Somerset.",
@@ -18,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Joanne's Driving School",
     images: [
       {
-        url: "/jologo.png", // Because of metadataBase, Next.js handles the full URL for you
+        url: "/jologo.png", 
         width: 1200,
         height: 630,
         alt: "Joanne's Driving School Logo",
@@ -38,6 +42,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
