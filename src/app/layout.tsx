@@ -6,18 +6,29 @@ const BASE_URL = "https://www.joannesdrivingschool.co.uk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Joanne's Driving School | Expert Lessons in Clevedon & Nailsea",
-  description: "Fully qualified female ADI with 25+ years experience. Professional driving tuition in Clevedon, Nailsea, Portishead, and surrounding areas. High pass rates and nervous pupil specialist.",
-  keywords: ["Driving lessons Clevedon", "Driving instructor Nailsea", "Female driving instructor North Somerset", "Driving lessons Portishead", "Learn to drive Clevedon"],
+  title: "Joanne's Driving School | Best Driving Lessons in Clevedon & Nailsea",
+  description: "Looking for the best driving instructor in North Somerset? Fully qualified female ADI with 25+ years experience. Expert lessons in Clevedon, Nailsea, and Portishead. High pass rates and nervous pupil specialist.",
+  keywords: [
+    "Driving lessons Clevedon", 
+    "Driving instructor Nailsea", 
+    "Best driving instructor North Somerset",
+    "Female driving instructor Clevedon", 
+    "Driving schools Portishead", 
+    "Learn to drive Yatton",
+    "manual driving lessons Clevedon",
+    "Refresher driving lessons Nailsea",
+    "Local driving school Clevedon",
+    "Patient driving instructor for nervous pupils",
+    "DVSA approved driving instructor North Somerset"
+  ],
   
-  // This helps SEO by preventing duplicate content issues
   alternates: {
     canonical: "/",
   },
 
   openGraph: {
-    title: "Joanne's Driving School | Professional Driving Tuition",
-    description: "Start your journey to freedom with expert driving lessons in North Somerset.",
+    title: "Joanne's Driving School | Best Local Driving Tuition",
+    description: "Start your journey to freedom with the best driving lessons in Clevedon, Nailsea, and Portishead.",
     url: "/",
     siteName: "Joanne's Driving School",
     images: [
@@ -35,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Joanne's Driving School",
-    description: "Expert driving lessons in Clevedon, Nailsea, and Portishead.",
+    description: "Expert driving lessons with a top-rated female instructor in North Somerset.",
     images: ["/jologo.png"],
   },
 
@@ -63,7 +74,7 @@ export default function RootLayout({
     "@type": "DrivingSchool",
     "name": "Joanne's Driving School",
     "image": `${BASE_URL}/jologo.png`,
-    "description": "Professional driving tuition with a fully qualified female ADI with 25+ years experience.",
+    "description": "Professional driving tuition with a fully qualified female ADI with 25+ years experience. Best driving school for nervous pupils in North Somerset.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Clevedon",
@@ -83,7 +94,8 @@ export default function RootLayout({
       { "@type": "City", "name": "Nailsea" },
       { "@type": "City", "name": "Portishead" },
       { "@type": "City", "name": "Yatton" },
-      { "@type": "City", "name": "Congresbury" }
+      { "@type": "City", "name": "Congresbury" },
+      { "@type": "City", "name": "Backwell" }
     ]
   };
 

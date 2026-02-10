@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+  const [theoryStatus, setTheoryStatus] = useState<'not_booked' | 'booked' | 'completed'>('not_booked');
 
   const onWhatsAppSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -11,22 +12,30 @@ export default function Contact() {
     
     const formData = new FormData(event.currentTarget);
     const name = formData.get('name');
+    const dob = formData.get('dob');
     const email = formData.get('email');
     const phone = formData.get('phone');
     const area = formData.get('area');
     const level = formData.get('level'); 
+    const theoryDate = formData.get('theory_date');
     const message = formData.get('message');
 
-    // for testing number: 07552384420 
-    // Format: 44 (UK code) followed by number without the leading 0
     const myNumber = "447765254421";
+
+    // Formatting Theory Status for message
+    let theoryInfo = theoryStatus.replace('_', ' ').toUpperCase();
+    if ((theoryStatus === 'booked' || theoryStatus === 'completed') && theoryDate) {
+      theoryInfo += ` (${theoryDate})`;
+    }
 
     const text = `Hi! I'd like to book a driving lesson.%0A%0A` +
                  `*Name:* ${name}%0A` +
+                 `*DOB:* ${dob}%0A` +
                  `*Email:* ${email}%0A` +
                  `*Phone:* ${phone}%0A` +
                  `*Area:* ${area}%0A` +
                  `*Experience:* ${level}%0A` +
+                 `*Theory Test:* ${theoryInfo}%0A` +
                  `*Message:* ${message}`;
 
     const whatsappUrl = `https://wa.me/${myNumber}?text=${text}`;
@@ -60,13 +69,13 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <>
-                <p className="text-lg text-slate-500 leading-relaxed mb-10 max-w-md font-medium">
+              <div className="space-y-8">
+                <p className="text-lg text-slate-500 leading-relaxed max-w-md font-medium">
                   Fill out the details below. Once you hit send, it will open WhatsApp to start a conversation with me instantly.
                 </p>
                 
-                <div className="space-y-8">
-                  {/* Phone Row */}
+                {/* Contact Details */}
+                <div className="space-y-6">
                   <div className="flex items-center gap-5">
                     <div className="w-14 h-14 bg-[#25D366] rounded-2xl flex-shrink-0 flex items-center justify-center text-white shadow-lg shadow-[#25D366]/20">
                       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -81,7 +90,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Email Row - FIXED MOBILE WRAPPING */}
                   <div className="flex items-center gap-5">
                     <div className="w-14 h-14 bg-slate-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-slate-600">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
@@ -90,16 +98,13 @@ export default function Contact() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email Joanne</p>
-                      <a 
-                        href="mailto:jo@joannesdrivingschool.co.uk?subject=Driving Lesson Inquiry" 
-                        className="font-black text-[#1A1A1A] text-lg sm:text-xl underline decoration-[#25D366] decoration-4 underline-offset-4 hover:text-[#006837] transition-colors break-all sm:break-normal"
-                      >
+                      <a href="mailto:jo@joannesdrivingschool.co.uk" className="font-black text-[#1A1A1A] text-lg sm:text-xl underline decoration-[#25D366] decoration-4 underline-offset-4 hover:text-[#006837] transition-colors break-all">
                         jo@joannesdrivingschool.co.uk
                       </a>
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             )}
           </div>
 
@@ -113,13 +118,18 @@ export default function Contact() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-[10px] font-black uppercase tracking-widest text-[#25D366] ml-1">Email Address</label>
-                <input required name="email" type="email" placeholder="email@example.com" className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#25D366] transition-all" />
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#25D366] ml-1">Date of Birth</label>
+                <input required name="dob" type="date" className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#25D366] transition-all [color-scheme:dark]" />
               </div>
 
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest text-[#25D366] ml-1">Phone Number</label>
                 <input required name="phone" type="tel" placeholder="07xxx xxxxxx" className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#25D366] transition-all" />
+              </div>
+
+              <div className="space-y-2 md:col-span-2">
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#25D366] ml-1">Email Address</label>
+                <input required name="email" type="email" placeholder="email@example.com" className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#25D366] transition-all" />
               </div>
 
               <div className="space-y-2">
@@ -139,6 +149,40 @@ export default function Contact() {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                   </div>
                 </div>
+              </div>
+
+              {/* Theory Test Section */}
+              <div className="md:col-span-2 space-y-4 bg-white/5 p-6 rounded-2xl border border-white/10">
+                <label className="text-[10px] font-black uppercase tracking-widest text-[#25D366]">Theory Test Status</label>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {[
+                    { id: 'not_booked', label: 'Not Booked' },
+                    { id: 'booked', label: 'Booked' },
+                    { id: 'completed', label: 'Completed' }
+                  ].map((item) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => setTheoryStatus(item.id as any)}
+                      className={`py-3 px-4 rounded-xl text-xs font-bold transition-all border ${
+                        theoryStatus === item.id 
+                        ? 'bg-[#25D366] border-[#25D366] text-white' 
+                        : 'bg-transparent border-white/10 text-white/60 hover:border-white/30'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+
+                {theoryStatus !== 'not_booked' && (
+                  <div className="pt-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-white/40 ml-1">
+                      {theoryStatus === 'booked' ? 'Test Date' : 'Date Passed'}
+                    </label>
+                    <input name="theory_date" type="date" className="w-full mt-2 p-4 rounded-xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#25D366] [color-scheme:dark]" />
+                  </div>
+                )}
               </div>
 
               <div className="space-y-2 md:col-span-2">
