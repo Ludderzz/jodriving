@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import BrandHeader from "@/components/layout/BrandHeader";
+import Footer from "@/components/sections/Footer"; // Added Footer Import
 
 const BASE_URL = "https://www.joannesdrivingschool.co.uk";
 
@@ -112,9 +113,14 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <BrandHeader />
+        
+        {/* main wraps the page content */}
         <main className="relative flex flex-col min-h-screen pt-[20px] md:pt-[20px]">
           {children}
         </main>
+
+        {/* Footer sits outside main so it's always at the bottom */}
+        <Footer />
       </body>
     </html>
   );
