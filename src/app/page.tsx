@@ -2,9 +2,9 @@ import Hero from "@/components/sections/Hero";
 import Info from "@/components/sections/Info";
 import Curriculum from "@/components/sections/Curriculum";
 import AboutJo from "@/components/sections/AboutJo";
+import Achievement from "@/components/sections/personalachievement"; // Added import
 import Reviews from "@/components/sections/Reviews";
 import Contact from "@/components/sections/Contact";
-import Footer from "@/components/sections/Footer";
 import FAQ from "@/components/sections/Fqa";
 
 export default function Home() {
@@ -21,12 +21,16 @@ export default function Home() {
       
       {/* 4. Personal Connection & Coverage Areas */}
       <AboutJo />
+
+      {/* 4.5 New Qualification Showcase */}
+      <Achievement />
       
       {/* 5. Social Proof / Wall of Love */}
       <Reviews />
+      
       <FAQ />
+      
       <Contact />
-
     </main>
   );
 }
